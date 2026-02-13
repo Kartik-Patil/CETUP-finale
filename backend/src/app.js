@@ -16,10 +16,14 @@ const preferencesRoutes = require("./routes/preferencesRoutes");
 const app = express();
 
 // CORS Configuration for production (Vercel + Render)
+const frontendUrls = process.env.FRONTEND_URLS 
+  ? process.env.FRONTEND_URLS.split(',').map(url => url.trim())
+  : [];
+
 const allowedOrigins = [
   "http://localhost:3000", // Local development
   "http://localhost:3001",
-  process.env.FRONTEND_URL, // Your Vercel URL
+  ...frontendUrls, // Your frontend URLs from .env
 ];
 
 app.use(cors({
