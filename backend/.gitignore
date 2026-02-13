@@ -1,0 +1,7 @@
+node_modules/
+# Windows npm cache accident
+**/%LOCALAPPDATA%/
+**/npm-cache/
+
+# Uploaded files
+uploads/
