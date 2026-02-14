@@ -58,7 +58,7 @@ const Practice = () => {
         subtitle="Select a subject and chapter to start practicing"
         actions={
           <button
-            onClick={() => navigate('/dashboard')}
+            onClick={() => navigate('/student')}
             className="px-4 py-2 bg-background text-text-primary rounded-lg hover:bg-border/30 transition-colors font-medium"
           >
             Back to Dashboard
